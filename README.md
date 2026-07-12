@@ -13,12 +13,6 @@ https://credit-card-approval-prediction-kpw8.onrender.com
 
 ---
 
-# 📸 Project Preview
-
-> Add screenshots of your application here.
-
----
-
 # 📂 Repository Structure
 
 ```text
