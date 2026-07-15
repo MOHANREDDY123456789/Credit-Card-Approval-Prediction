@@ -11,6 +11,10 @@ The project automates the credit approval process, reduces manual effort, and en
 🚀 **Application:**  
 https://credit-card-approval-prediction-kpw8.onrender.com
 
+# 🌐 Demo Video
+
+https://drive.google.com/file/d/1Qk3qG3yrosbwSEixqFXPavIxflBmvkVM/view?usp=sharing
+
 ---
 
 # 📂 Repository Structure
