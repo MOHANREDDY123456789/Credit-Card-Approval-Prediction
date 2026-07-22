@@ -1,17 +1,20 @@
+import os
 import pickle
 
 import numpy as np
 from flask import Flask, render_template, request
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 app = Flask(__name__)
 
-with open("model/model.pkl", "rb") as f:
+with open(os.path.join(BASE_DIR, "model", "model.pkl"), "rb") as f:
     model = pickle.load(f)
-with open("model/model_columns.pkl", "rb") as f:
+with open(os.path.join(BASE_DIR, "model", "model_columns.pkl"), "rb") as f:
     feature_columns = pickle.load(f)
-with open("model/scaler.pkl", "rb") as f:
+with open(os.path.join(BASE_DIR, "model", "scaler.pkl"), "rb") as f:
     scaler = pickle.load(f)
-with open("model/encoders.pkl", "rb") as f:
+with open(os.path.join(BASE_DIR, "model", "encoders.pkl"), "rb") as f:
     encoders = pickle.load(f)
 
 model_name = "Random Forest (best of 4 models)"
