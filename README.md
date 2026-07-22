@@ -8,7 +8,7 @@ The project automates the credit approval process, reduces manual effort, and en
 
 # 🌐 Live Demo
 
-🚀 **Application:**  
+🚀 **Application:**
 https://credit-card-approval-prediction-kpw8.onrender.com
 
 # 🎥 Demo Video
@@ -22,26 +22,34 @@ https://drive.google.com/file/d/1Qk3qG3yrosbwSEixqFXPavIxflBmvkVM/view?usp=shari
 ```text
 Credit-Card-Approval-Prediction/
 │
-├── dataset/
+├── Dataset/
+│   ├── application_record.csv
+│   └── credit_record.csv
 │
-├── models/
-│   ├── best_model.pkl
-│   ├── scaler.pkl
-│   └── ...
+├── Flask/
+│   ├── app.py
+│   ├── templates/
+│   │   └── index.html
+│   └── model/
+│       ├── model.pkl
+│       ├── model_columns.pkl
+│       ├── scaler.pkl
+│       └── encoders.pkl
 │
-├── notebooks/
+├── Project_Documentation/
+│   ├── 1.Brainstorming_&_Ideation/
+│   ├── 2.Requirement_Analysis/
+│   ├── 3.Project_Design_Phase/
+│   ├── 4.Project_Planning_Phase/
+│   ├── 5.Project_Development_Phase/
+│   ├── 6.Project_Testing/
+│   ├── 7.Project_Documentation/
+│   └── 8.Project_Demonstration/
 │
-├── static/
-│   ├── css/
-│   ├── images/
-│   └── js/
+├── Training/
+│   └── Credit_Card_Approval_Model_Training.ipynb
 │
-├── templates/
-│   └── index.html
-│
-├── app.py
-├── data_preprocessing.py
-├── train_model.py
+├── pyproject.toml
 ├── requirements.txt
 ├── README.md
 └── .gitignore
@@ -91,17 +99,20 @@ pip install -r requirements.txt
 
 ## 4. Train the Machine Learning Model
 
-```bash
-python train_model.py
+Open and run all cells in:
+
+```text
+Training/Credit_Card_Approval_Model_Training.ipynb
 ```
 
-This generates the trained model inside the **models/** directory.
+This trains all four models on `Dataset/application_record.csv` and `Dataset/credit_record.csv`, compares them, and saves the best-performing model into `Flask/model/` as `model.pkl`, `model_columns.pkl`, `scaler.pkl`, and `encoders.pkl`.
 
 ---
 
 ## 5. Run the Flask Application
 
 ```bash
+cd Flask
 python app.py
 ```
 
@@ -124,7 +135,7 @@ http://127.0.0.1:5000
 - Responsive User Interface
 - Real-Time Prediction
 - Pickle Model Serialization
-- Easy Deployment on Render
+- Live Deployment on Render
 
 ---
 
@@ -198,12 +209,12 @@ The best-performing model is automatically selected and saved for deployment.
 
 # 📈 Models Compared
 
-| Model | Accuracy |
-|--------|----------|
-| Logistic Regression | 90.2% |
-| Decision Tree | 90.9% |
-| Random Forest | **93.9%** |
-| XGBoost | 92.1% |
+| Model | Accuracy | F1-score |
+|--------|----------|---------|
+| Logistic Regression | 90.2% | 0.944 |
+| Decision Tree | 90.9% | 0.949 |
+| Random Forest | **93.9%** | **0.966** |
+| XGBoost | 92.1% | 0.956 |
 
 ---
 
